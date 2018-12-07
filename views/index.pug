@@ -1,0 +1,9 @@
+extends layout.pug
+
+include mixins/_blog 
+
+block content
+  a(href='/new') Make new Blog
+  each blog in blogs
+    +blog(blog)
+    a(href=`${blog._id}`) Visit Blog Detail
